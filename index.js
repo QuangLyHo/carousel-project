@@ -1,54 +1,44 @@
-// const slides = document.getElementsByClassName('carousel-item')
-// let slidePosition = 0
-// const totalSlides = slides.length
+const slides = document.getElementsByClassName('carousel-item')
+let slidePosition = 0
+const totalSlides = slides.length
 
-// document.getElementById('carousel-prev-btn').addEventListener('click', prevSlide)
-// document.getElementById('carousel-next-btn').addEventListener('click', nextSlide)
+document.getElementById('carousel-prev-btn').addEventListener('click', prevSlide)
+document.getElementById('carousel-next-btn').addEventListener('click', nextSlide)
 
 
-// function showSlide(n) {
-//     hideAllSlides()
-//     slides[n].classList.add('carousel-item-visible')
-// }
+function showSlide(n) {
+    hideAllSlides()
+    slides[n].classList.add('carousel-item-visible')
+}
 
-// function nextSlide() {
-//     hideAllSlides()
+function nextSlide() {
+    hideAllSlides()
 
-//     // if (slidePosition === totalSlides - 1) {
-//     //     slidePosition = 0
-//     // } else slidePosition++
+    // if (slidePosition === totalSlides - 1) {
+    //     slidePosition = 0
+    // } else slidePosition++
 
-//     slidePosition === totalSlides - 1 ?  slidePosition = 0 : slidePosition++
+    slidePosition === totalSlides - 1 ?  slidePosition = 0 : slidePosition++
 
-//     showSlide(slidePosition)
-// }
+    showSlide(slidePosition)
+}
 
-// function prevSlide() {
-//     hideAllSlides()
+function prevSlide() {
+    hideAllSlides()
     
-//     if (slidePosition === 0) {
-//         slidePosition = totalSlides - 1
-//     } else slidePosition--
+    if (slidePosition === 0) {
+        slidePosition = totalSlides - 1
+    } else slidePosition--
 
-//     showSlide(slidePosition)
-// }
+    showSlide(slidePosition)
+}
 
-// function hideAllSlides() {
-//     for (let slide of slides) {
-//         slide.classList.remove('carousel-item-visible')
-//         slide.classList.add('carousel-item-hidden')
-//     }
-// }
-
-
-// let autoIncrSlide = setInterval(nextSlide, 3000)
-
-function doubleloop() {
-    for (let i = 1; i < 5; i = i * 2) {
-        for (let j = 20; j > 16; j = j - 2) {
-            console.log(i + j)
-        }
+function hideAllSlides() {
+    for (let slide of slides) {
+        slide.classList.remove('carousel-item-visible')
+        slide.classList.add('carousel-item-hidden')
     }
 }
 
-doubleloop
+
+let autoIncrSlide = setInterval(nextSlide, 3000)
